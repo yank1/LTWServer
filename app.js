@@ -15,7 +15,7 @@ var session = require('express-session');
 var configDB = require('./config/database.js');
 
 
-// var path = require('path');
+var path = require('path');
 // var favicon = require('serve-favicon');
 // var logger = require('morgan');
 // var routes = require('./routes/index');
@@ -50,7 +50,7 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // routes ======================================================================
 require('./routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
