@@ -1,7 +1,10 @@
-//https://scotch.io/tutorials/an-introduction-to-mongodb
-
+// config/database.js
 module.exports = {
-	'url' : 'mongodb://' + process.env.MONGOLAB_URI 
-    // 'url' : 'mongodb://localhost/pretzel' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
-
+    'connection': {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'test123'
+    },
+	'database': 'my_schema',
+    'users_table': 'users'
 };
